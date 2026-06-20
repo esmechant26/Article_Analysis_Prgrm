@@ -4,7 +4,6 @@ import re
 with open("/Users/esmechant/Desktop/SE/python/article_analysis/Article_Analysis_Prgrm/news_article.txt", "r") as file:
     article_text = file.read()
 
-
 def count_specific_word(text, word):
     count = 0
     # Define punctuation to strip from words
@@ -18,6 +17,7 @@ def count_specific_word(text, word):
 
     return f"Word count of '{word}' = {count}"
 print(count_specific_word(article_text, "The"))
+
 def identify_most_common_word(text):
     if len(text) == 0:
         return "None"
@@ -48,7 +48,6 @@ def identify_most_common_word(text):
 
 print(identify_most_common_word(article_text))
 
-
 def calculate_average_word_length(text):
     # extract only valid alphanumeric words, converted to lowercase
     words = re.findall(r'\b\w+\b', text.lower())
@@ -62,6 +61,7 @@ def calculate_average_word_length(text):
     avg_word_length = total_length / word_count
     return (f'Average word length: {avg_word_length}')
 print(calculate_average_word_length(article_text))
+
 def count_paragraphs(text):
     # Split by two or more consecutive newlines to identify paragraphs
     paragraphs = re.split(r'\n\s*\n', text.strip())
@@ -69,6 +69,7 @@ def count_paragraphs(text):
     paragraph_count = len([p for p in paragraphs if p.strip()])
     return f"Total Paragraphs: {paragraph_count}"
 print(count_paragraphs(article_text))
+
 def count_sentences(text):
     # Pattern splits on . ! or ? while ignoring titles (Mr, Dr, Mrs, Ms, Inc)
     sentence_pattern = r'(?<!\bInc)(?<!\bDr)(?<!\bMr)(?<!\bMs)(?<!\bMrs)[\.!?]+(?:\s+|\n+)'
