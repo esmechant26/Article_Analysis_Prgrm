@@ -1,0 +1,2 @@
+A program that analyzes written text such as news articles. The program can count the number of times a specific word is used, identify the most common word, calculate the average length of words, count the number of paragraphs, and the number of sentences in the text.
+The program is written with Python and uses often uses regex to strip down words, sentences, and paragraphs for accurate analysis.
